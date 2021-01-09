@@ -11,7 +11,7 @@ script:
 - binaries/hugo
 deploy:
   provider: s3
-  bucket: cloudshock.io
+  bucket: automaticdev.team
   region: us-east-1
   local_dir: public
   skip_cleanup: true
