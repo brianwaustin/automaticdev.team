@@ -1,0 +1,50 @@
+<!-- Single page template for Hugo site -->
+<!DOCTYPE html>
+<html lang="en-US" class="js">
+
+<head>
+    {{ partial "siteheaders" (dict "Title" "Automatic DEV Team" "Description" "Building high performance, autonomous software development teams") }}
+</head>
+
+<body class="home page-template-default page page-id-12 custom-background small-header medium-content-area medium-body-text small-headings medium-icons no-sidebar">
+
+    {{ partial "sitesvg" . }}
+
+    <div id="page" class="site">
+
+        {{ partial "sitereader" . }} 
+        
+        {{ partial "header" (dict "Title" "Automatic DEV Team" "Description" "Building high performance, autonomous software development teams") }}
+
+        <div id="content" class="site-content">
+
+            <div id="primary" class="content-area">
+
+                <main id="main" class="site-main" role="main">
+
+                    <article id="post-12" class="post-12 page type-page status-publish has-post-thumbnail hentry">
+
+                        <div class="entry-content">
+
+                            {{.Content}}
+                            {{ partial "by-date-reverse" . }}
+
+                        </div>
+
+                    </article>
+
+                </main>
+
+            </div>
+
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+
+    <script type="text/javascript" src="/js/main-scripts.min.js"></script>
+    
+</body>
+
+</html>

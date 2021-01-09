@@ -1,0 +1,25 @@
+
+.article-title-image{
+  margin: inherit;
+  padding: inherit;
+}
+
+.socialMedia{
+  margin: 0px 0px 0px 15px;  
+}
+
+
+.socialMediaIcon {
+  height: 35px;
+  width: 35px;
+  padding: 0px 0px 0px 15px;
+}
+
+/* .socialMedia a {
+  background-color:#497099;
+}
+
+.socialMedia a:hover{ 
+  background-color:#497099;
+} */
+

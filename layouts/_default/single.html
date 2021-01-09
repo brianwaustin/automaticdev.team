@@ -1,0 +1,74 @@
+<!-- Base template for Hugo site -->
+<!DOCTYPE html>
+<html lang="en-US" class="js">
+
+<head>
+    {{ partial "siteheaders" (dict "Title" "Automatic DEV Team" "Description" .Title) }}
+</head>
+
+<body class="home page-template-default page page-id-12 custom-background small-header medium-content-area medium-body-text small-headings medium-icons no-sidebar">
+
+    {{ partial "sitesvg" . }}
+
+    <div id="page" class="site">
+
+        {{ partial "sitereader" . }} 
+        
+        {{ partial "header" (dict "Title" .Title "Description" "") }}
+
+        <div id="content" class="site-content">
+
+            <div id="primary" class="content-area">
+
+                <main id="main" class="site-main" role="main">
+
+                    <article id="post-12" class="post-12 page type-page status-publish has-post-thumbnail hentry">
+
+                        <div class="entry-content">
+                            <div>
+                                    <span class="posted-on"><strong>By:  </strong>
+                                        {{.Params.author}}
+                                    </span>
+                                </div>
+                            <div>
+                                <span class="posted-on"><strong>Posted on:  </strong>
+                                    <time class="entry-date published" datetime="{{ .Date }}">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</time>
+                                </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <strong>Categories:  </strong> {{range .Params.categories}}
+                                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}
+                                </span>
+                            </div>  
+                            <div>  
+                                <span>
+                                    <strong>Tags:  </strong> {{range .Params.tags}}
+                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="entry-content">
+
+                            {{.Content}}
+
+                        </div>
+
+                    </article>
+
+                </main>
+
+            </div>
+
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+
+    <script type="text/javascript" src="/js/main-scripts.min.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US" class="js">
+
+<head>
+    {{ partial "siteheaders" (dict "Title" "Automatic DEV Team" "Description" .Title) }}
+</head>
+
+<body class="home page-template-default page page-id-12 custom-background small-header medium-content-area medium-body-text small-headings medium-icons no-sidebar">
+
+    {{ partial "sitesvg" . }}
+
+    <div id="page" class="site">
+
+        {{ partial "sitereader" . }} {{ partial "header" (dict "Title" .Title "Description" "" ) }}
+
+        <div id="content" class="site-content">
+
+            <div id="primary" class="content-area">
+
+                <main id="main" class="site-main" role="main">
+
+                    <article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-costs">
+
+                        {{ range .Pages }}
+
+                        <header class="entry-header">
+
+                            <div style="color:grey; font-size:16px;">{{ if .Params.categories }}
+                                <strong>Categories:</strong> {{range .Params.categories}}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+                            <div style="color:grey; font-size:16px;">{{ if .Params.tags }}
+                                <strong>Tags:</strong> {{range .Params.tags}}
+                                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+                            <div class="entry-meta">
+                                <span class="posted-on">Posted on
+                                    <time class="entry-date published" datetime="{{ .Date }}">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</time>
+                                </span>
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="{{.URL}}" rel="bookmark">{{.Title}}</a>
+                            </h2>
+
+                        </header>
+
+                        <div class="entry-content">
+                            {{.Summary}}
+                            <a href="{{ .RelPermalink }}">Continue Reading…</a>
+                        </div>
+
+                        <footer class="entry-footer">
+                        </footer>
+
+                        {{ end }}
+
+                    </article>
+
+                </main>
+
+            </div>
+
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+
+    <script type="text/javascript" src="/js/main-scripts.min.js"></script>
+
+</body>
+
+</html>

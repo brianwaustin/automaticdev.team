@@ -1,0 +1,63 @@
+<header id="masthead" class="site-header" role="banner">
+
+                <div class="header-info">
+                    <h1 class="header-title">{{.Title}}</h1>
+                    <p class="header-description">{{.Description}}</p>
+                </div>
+                <!-- .site-branding -->
+    
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+    
+                    <a href="{{ "" | absURL }}" class="home-link">
+                        <div class="icon home-icon" aria-hidden="true">
+                            <svg class="icon__cnt" viewBox="0 0 32 32">
+                                <path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+                            </svg>
+                        </div>
+                        Home </a>
+    
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <span aria-hidden="true">
+                            <div class="icon__cnt" aria-hidden="true" data-icon="ei-navicon" data-size="s">                                
+                            </div>
+                        </span>
+                        Menu </button>
+    
+                    <div class="menu-wrapper">
+                        <header class="menu-header">
+                            <h2 class="menu-title">Menu</h2>
+                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                                <span aria-hidden="true">
+                                    <div class="icon__cnt" data-icon="ei-close" data-size="s">                                        
+                                    </div>
+                                </span>
+                                <span class="screen-reader-text">Close</span>
+                            </button>
+                        </header>                    
+    
+                        <ul id="menu-top-menu" class="primary-menu nav-menu" aria-expanded="false">
+                            <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28">
+                                <a href="{{ "" | absURL }}">Home</a>
+                            </li>                     
+                            <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30">
+                                    <a href="{{ "categories/teams/" | absURL }}">Teams</a>
+                            </li> 
+                            <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30">
+                                <a href="{{ "categories/technology/" | absURL }}">Technology</a>
+                            </li>                                
+                            <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30">
+                                <a href="{{ "categories/culture/" | absURL }}">Culture</a>
+                            </li>
+                            <li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
+                                <a href="{{ "categories/resources/" | absURL }}">Resources</a>
+                            </li>
+                            <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31">
+                                <a href="{{ "library/" | absURL }}">The Library</a>
+                            </li>                           
+                            
+                        </ul>                          
+    
+                    </div>                    
+                </nav>               
+    
+            </header>            

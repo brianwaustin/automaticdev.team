@@ -1,0 +1,55 @@
+<!-- 404 Not Found template for Hugo site -->
+<!DOCTYPE html>
+<html lang="en-US" class="js">
+
+<head>
+    {{ partial "siteheaders" (dict "Title" "Automatic DEV Team" "Description" .Title) }}
+</head>
+
+<body class="home page-template-default page page-id-12 custom-background small-header medium-content-area medium-body-text small-headings medium-icons no-sidebar">
+
+    {{ partial "sitesvg" . }}
+
+    <div id="page" class="site">
+
+        {{ partial "sitereader" . }} 
+        
+        {{ partial "header" (dict "Title" "OOPS! THAT'S A 404 !" "Description" "") }}
+
+        <div id="content" class="site-content">
+
+            <div id="primary" class="content-area">
+
+                <main id="main" class="site-main" role="main">
+
+                    <article id="post-12" class="post-12 page type-page status-publish has-post-thumbnail hentry">
+
+                        <div class="entry-content">
+                            
+                            <p>It looks like nothing was found at this location. Maybe try one of the links below?</p>
+
+                                <h3><a href="{{ "categories/" | absURL }}">CATEGORIES</a></h3>                                
+
+                                <h3><a href="{{ "tags/" | absURL }}">TAGS</a></h3>                                
+
+                        </div>
+
+                    </article>
+
+                </main>
+
+            </div>
+
+        </div>
+
+        {{ partial "footer" . }}
+
+    </div>
+
+    <script type="text/javascript" src="/js/main-scripts.min.js"></script>
+    
+</body>
+
+</html>
+
+

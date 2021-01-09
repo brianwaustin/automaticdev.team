@@ -1,0 +1,9 @@
+baseURL = "https://cloudshock.io/"
+languageCode = "en-us"
+title = "A New Blog"
+Subtitle = "Building high performance, autonomous software teams"
+description = "Focused on creating scalable development platforms that reduce cognitive load on developers and maximize productivity and quality."
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    
